@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>📩 私の連絡先</h2>
+        <p><strong>📞 携帯電話：</strong> 070-4769-6868</p >
+        <p><strong>📧 Eメール：</strong> tanhaoyue97@gmail.com</p >
+
+        <h3>📋 貴方の連絡先</h3>
+        <form>
+            <label for="name">名前：</label>
+            <input type="text" id="name" name="name" placeholder="お名前を入力してください" required>
+
+            <label for="password">パスワード：</label>
+            <input type="password" id="password" name="password" placeholder="パスワードを入力してください" required>
+
+            <label>性別：</label>
+            <div class="radio-group">
+                <input type="radio" id="man" name="gender" value="man">
+                <label for="man">男</label>
+                <input type="radio" id="woman" name="gender" value="woman">
+                <label for="woman">女</label>
+            </div>
+
+            <label>趣味：</label>
+            <div class="checkbox-group">
+                <input type="checkbox" id="sing" name="hobby" value="sing">
+                <label for="sing">歌</label>
+                <input type="checkbox" id="dance" name="hobby" value="dance">
+                <label for="dance">ダンス</label>
+                <input type="checkbox" id="tourism" name="hobby" value="tourism">
+                <label for="tourism">旅行</label>
+            </div>
+
+            <label for="country">国籍：</label>
+            <select id="country" name="country">
+                <option value="Japan">日本</option>
+                <option value="China">中国</option>
+                <option value="India">インド</option>
+            </select>
+
+            <div class="button-group">
+                <button type="submit" class="submit-btn">送信</button>
+                <button type="reset" class="reset-btn">リセット</button>
+            </div>
+        </form>
+        <a href="index.html">🏠 ホームに戻る</a>
+    </div>
+
+</body>
+</html>

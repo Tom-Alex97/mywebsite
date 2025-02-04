@@ -1,0 +1,57 @@
+
+/* 全局样式 */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* 头像样式 */
+.profile {
+    margin-top: 30px;
+}
+
+.profile img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; /* 圆形头像 */
+    border: 5px solid #007bff; /* 蓝色边框 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* 导航栏样式 */
+nav {
+    margin-top: 20px;
+}
+
+nav a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: #007bff;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: #0056b3;
+}
+
+/* 页脚样式 */
+footer {
+    margin-top: 30px;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    font-size: 14px;
+    position: fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    text-align: center;
+}

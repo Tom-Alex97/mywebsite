@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>譚献科のポートフォリオ</title>
+    <link rel="stylesheet" href="aboutme.css">
+</head>
+<body>
+
+    <!-- 头部 -->
+    <header>
+        <div class="container">
+            <h1>譚献科（たん けんか）</h1>
+            <p>ITエンジニア | テストエンジニア | プログラマー</p >
+        </div>
+    </header>
+
+    <!-- 个人简介 -->
+    <section id="about">
+        <div class="container">
+            <h2>自己紹介</h2>
+            <p id="profileText">
+                初めまして、譚献科（たん けんか）と申します。今年28歳でございます。深圳大学を卒業し、専攻は工学でございました。
+                在学中は特にC言語を得意としており、プログラミングやシステム設計の基礎をしっかりと学んでまいりました。
+                <br><br>
+                卒業後、中国の企業におきましてテストエンジニアとして勤務しておりました。主に石油・ガスパイプラインの運行状態をテストする業務を担当し、
+                データ分析やシステムの安定性向上に尽力いたしました。この経験を通じて、問題解決能力や細部への注意力を身につけることができました。
+            </p >
+            <button onclick="editProfile()">編集</button>
+        </div>
+    </section>
+
+    <!-- 技能列表 -->
+    <section id="skills">
+        <div class="container">
+            <h2>スキル</h2>
+            <ul>
+                <li>C言語 - ★★★★☆</li>
+                <li>データ分析 - ★★★★☆</li>
+                <li>システム設計 - ★★★☆☆</li>
+                <li>テストエンジニアリング - ★★★★★</li>
+                <li>日本語（学習中）- ★★☆☆☆</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- 爱好 -->
+    <section id="hobbies">
+        <div class="container">
+            <h2>趣味</h2>
+            <p>水泳が趣味で、特に長時間泳ぐことを得意としています。2時間以上泳ぎ続けることも可能であり、忍耐力と集中力を鍛えました。</p >
+        </div>
+    </section>
+
+    <!-- 未来发展方向 -->
+    <section id="future">
+        <div class="container">
+            <h2>今後の目標</h2>
+            <p>
+                - 日本のIT企業でソフトウェア開発やテスト業務に携わること。<br>
+                - 日本語能力試験（JLPT N2/N1）を取得し、ビジネスレベルの会話力を向上させること。<br>
+                - 新しいプログラミング言語（Python, Javaなど）を学び、より幅広い技術を習得すること。
+            </p >
+        </div>
+    </section>
+    <a href="index.html">🏠 ホームに戻る</a>
+    <!-- 底部 -->
+    <footer>
+        <p>© 2025 譚献科 | すべての権利を保有</p >
+    </footer>
+    <script>
+        function editProfile() {
+            let currentText = document.getElementById("profileText").innerText;
+            let newText = prompt("プロフィールを編集してください:", currentText);
+            if (newText !== null && newText.trim() !== "") {
+                document.getElementById("profileText").innerText = newText;
+                localStorage.setItem("profileText", newText); // 保存到 localStorage
+            }
+        }
+
+        // ページ読み込み時に保存されたデータを取得
+        document.addEventListener("DOMContentLoaded", function () {
+            let savedText = localStorage.getItem("profileText");
+            if (savedText) {
+                document.getElementById("profileText").innerText = savedText;
+            }
+        });
+    </script>
+
+</body>
+</html>
