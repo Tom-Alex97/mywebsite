@@ -53,30 +53,7 @@
             </div>
         </form>
         <a href="index.html">🏠 ホームに戻る</a>
-    </div><script>
-    document.querySelector("form").addEventListener("submit", function (event) {
-        event.preventDefault();
-
-        // 收集表单数据
-        const formData = {
-            name: document.getElementById("name").value,
-            password: document.getElementById("password").value,
-            gender: document.querySelector('input[name="gender"]:checked')?.value,
-            hobby: Array.from(document.querySelectorAll('input[name="hobby"]:checked')).map(h => h.value),
-            country: document.getElementById("country").value
-        };
-
-        // 提交到后端
-        fetch("http://localhost:8080/api/contact/submit", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(formData)
-        })
-        .then(response => response.text())
-        .then(data => alert(data))
-        .catch(error => console.error("エラー:", error));
-    });
-</script>
+    </div>
 
 </body>
 </html>
